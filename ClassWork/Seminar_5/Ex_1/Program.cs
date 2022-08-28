@@ -55,6 +55,8 @@ int [] array = GetArray(4,-9,9);
 
 Console.WriteLine(String.Join(",", array));
 
+Console.WriteLine(String.Join(",", array1(array)));
+
 int[] GetArray(int count, int minValue, int maxValue) // Обьявил условия для массива в методе 1. длина массива 2. мин. значение и макс.значение.
 {
     int [] array = new int[count]; // объявил массив array и сказал что он будет равен count то есть его длинне.
@@ -65,5 +67,14 @@ int[] GetArray(int count, int minValue, int maxValue) // Обьявил усло
     }
 
     return array; // возврат 
+}
+
+int [] array1 ( int [] array )
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array [i]*= -1;
+    }
+    return array;
 }
 
